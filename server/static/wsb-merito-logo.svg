@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#002855"/>
+  <!-- WSB Merito stylized geometric M / ribbon emblem -->
+  <path d="M12 46V18h7.5l8.5 16.5L36.5 18H44v28h-6.5V29.2L30 43.5h-4L18.5 29.2V46H12Z" fill="#FFFFFF"/>
+  <path d="M46 18h6v20h-6V18Zm0 23h6v5h-6v-5Z" fill="#00B4D8"/>
+  <rect x="12" y="50" width="40" height="3.5" rx="1.75" fill="#00B4D8"/>
+</svg>

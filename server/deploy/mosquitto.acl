@@ -1,0 +1,15 @@
+# /etc/mosquitto/acl
+# Backend service account: read device telemetry/status/logs, publish retained configs & live commands
+user backend
+topic read wsb/devices/+/telemetry
+topic read wsb/devices/+/status
+topic read wsb/devices/+/logs
+topic write wsb/devices/+/config
+topic write wsb/devices/+/cmd
+
+# Each device (username == <device_id>) may only access its own subtree
+pattern write wsb/devices/%u/telemetry
+pattern write wsb/devices/%u/status
+pattern write wsb/devices/%u/logs
+pattern read  wsb/devices/%u/config
+pattern read  wsb/devices/%u/cmd

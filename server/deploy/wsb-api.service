@@ -1,0 +1,22 @@
+[Unit]
+Description=WSB Telemetry FastAPI Backend
+After=network.target mosquitto.service
+Wants=mosquitto.service
+
+[Service]
+Type=simple
+User=wsb
+Group=wsb
+WorkingDirectory=/opt/wsb/server
+EnvironmentFile=/etc/wsb/api.env
+ExecStart=/opt/wsb/server/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1 --no-access-log
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/wsb
+
+[Install]
+WantedBy=multi-user.target

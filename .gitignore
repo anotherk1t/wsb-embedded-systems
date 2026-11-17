@@ -1,0 +1,35 @@
+# Secrets, keys, and environment files
+firmware/include/secrets.h
+*.key
+*.pem
+*.p12
+*.crt
+*.env
+.env*
+*credentials*
+*secret*
+!firmware/include/secrets.example.h
+
+# Generated markdown and PDF documentation files (keep only root README.md)
+*.md
+!/README.md
+docs/
+*.pdf
+
+# Build, dependency, and runtime directories
+.DS_Store
+node_modules/
+web/node_modules/
+web/dist/
+firmware/.pio/
+firmware/.vscode/
+__pycache__/
+*.py[cod]
+.venv/
+server/.venv/
+server/data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite*
+images (1).jpeg
